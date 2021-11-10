@@ -35,6 +35,7 @@ class RestaurantsController < ApplicationController
 
   def destroy
     @restaurant.destroy
+    @review.destroy
     redirect_to restaurants_url, notice: 'Restaurant was successfully destroyed.'
   end
 
